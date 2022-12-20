@@ -1,16 +1,17 @@
-def tip_calculator(total, tip_percentage):
-    # Calculate the tip amount
-    tip = total * tip_percentage
+# Program to calculate the tip for a restaurant bill
 
-    # Calculate the total cost including the tip
-    total_with_tip = total + tip
+# Prompt the user to enter the total bill amount
+bill_amount = float(input("Enter the total bill amount: "))
 
-    # Return the tip amount and the total cost including the tip
-    return tip, total_with_tip
+# Prompt the user to enter the desired tip percentage
+tip_percentage = float(input("Enter the desired tip percentage: "))
 
-# Enter in tip percentage and total price below:
-total = 300
-tip_percentage = 0.15
-tip, total_with_tip = tip_calculator(total, tip_percentage)
-print(f"Tip amount: ${tip:.2f}")
-print(f"Total including tip: ${total_with_tip:.2f}")
+# Calculate the tip amount
+tip_amount = bill_amount * (tip_percentage / 100)
+
+# Calculate the total amount due
+total_amount = bill_amount + tip_amount
+
+# Display the tip amount and total amount due
+print("Tip amount: $" + str(tip_amount))
+print("Total amount due: $" + str(total_amount))
